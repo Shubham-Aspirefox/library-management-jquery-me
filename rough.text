@@ -1,0 +1,106 @@
+//return modal funciton******************************************************************
+function returnBookFun(e){
+    $('#returnBook').modal('show');
+    let tempRec = JSON.parse(localStorage.getItem('recList'));
+    let bookList = tempData;
+    let targetRow = $(e).parent().parent().attr("id");
+    for(let i=0;i<tempRec.length;i++){
+     if(tempRec[i].name == targetRow){
+        let bookArr = tempRec[i].selectBook;
+        $('#selectReturnBook').empty();
+        for(let j= 0;j<bookArr.length;j++){
+            const opt = $('<option></option>')
+            opt.val(`${bookArr[j]}`);
+            opt.text(`${bookArr[j]}`);
+            $('#selectReturnBook').append(opt);
+        }
+
+        //update price
+        $('#selectReturnBook').change(()=>{
+            let totalCost = tempRec[i].totalPrice;
+            let currBookPrice = findPrice($('#selectReturnBook').val());
+            let newPrice = totalCost - currBookPrice;
+            $('#rtnPrice').text(newPrice);
+        })
+     }
+    }
+
+    $('#returnBtn').click(()=>{
+        for(let i=0;i<tempRec.length;i++){
+            if(tempRec[i].name == targetRow){
+                let nbookList = tempRec[i].selectBook;
+                console.log(nbookList);
+                let currBook = $('#selectReturnBook').val();
+                for(let j=0;j<nbookList.length;j++){
+                    if(nbookList[j] == currBook){
+                        nbookList.splice(j, 1);
+                    }
+                    console.log("u boo", nbookList);
+                    tempRec[i].selectBook = nbookList;
+                    let ntotalPrice = $('#rtnPrice').text();
+                    tempRec[i].totalPrice = ntotalPrice;
+                    console.log(tempRec[i].totalPrice);
+                    //update table
+                    localStorage.setItem('recList',JSON.stringify(tempRec));
+                    if($('#tbody').html()==""){
+                        createTable();
+                    }else{
+                        $('#tbody').html("");
+                            createTable();
+                    }
+                }
+            }
+        }
+        
+        $('#returnBook').modal('hide');
+    })
+}
+
+****************************************************************************************
+
+
+//click add book button
+function addBookFunction(e){
+    $('#addBook').modal('show');
+    let bookList = tempData;
+    let targetRow = $(e).parent().parent().attr("id");
+    let tempRec = JSON.parse(localStorage.getItem('recList'));
+    
+    $('#selectAddBook').empty();
+    for(let j=0;j<bookList.length;j++){
+        let optionB = $(`<option value="${bookList[j].Name}"></option`);
+        optionB.text(bookList[j].Name);
+        $('#selectAddBook').append(optionB);
+    }
+    $('#selectAddBook').change(()=>{
+        $('#bKPrice').text(findPrice($('#selectAddBook').val()))
+    })
+    //click book button
+    $('#addBook1').click(()=>{
+        for(let i=0;i<tempRec.length;i++){
+            if(tempRec[i].name == targetRow){
+                let bookArr = tempRec[i].selectBook;
+                let newBook = $('#selectAddBook').val();
+                //todo
+                bookArr.unshift(newBook)
+                tempRec[i].selectBook = bookArr;
+                let bookcost = tempRec[i].totalPrice;
+                let currBkPrice = findPrice($('#selectAddBook').val());
+                let newp = bookcost + currBkPrice;
+                tempRec[i].totalPrice = newp
+                console.log(tempRec[i]);
+                localStorage.setItem('recList', JSON.stringify(tempRec));
+                //update table
+                if($('#tbody').html()==""){
+                    createTable();
+                }else{
+                    $('#tbody').html("");
+                        createTable();
+                }
+            }
+            
+        }
+        $('#addBook').modal('hide');
+    })
+    
+}

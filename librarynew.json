@@ -1,0 +1,83 @@
+[
+    {
+        "BookId": "101",
+        "Name": "Harry Potter",
+        "ImageUrl": "https://bootlegcomparisons.com/wp-content/uploads/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
+        "Price": 510,
+        "Genre": "Thriller",
+        "QuantityAvailable": 10
+    },{
+        "BookId": "102",
+        "Name": "Twilight",
+        "ImageUrl": "https://i.ytimg.com/vi/IjhIR5vwczU/movieposter_en.jpg",
+        "Price": 1550,
+        "Genre": "Horror",
+        "QuantityAvailable": 10
+    },
+    {
+        "BookId": "103",
+        "Name": "IT",
+        "ImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSklgYEhXkUNBdDqg9wnYacMiNWpwjNlosEIg&usqp=CAU",
+        "Price": 600,
+        "Genre": "Horror",
+        "QuantityAvailable": 10
+    },
+    {
+        "BookId": "104",
+        "Name": "Cojuring",
+        "ImageUrl": "https://flxt.tmsimg.com/assets/p18746403_p_v8_aa.jpg",
+        "Price": 1200,
+        "Genre": "Horror",
+        "QuantityAvailable": 10
+    },
+    {
+        "BookId": "105",
+        "Name": "NUN",
+        "ImageUrl": "https://images.squarespace-cdn.com/content/v1/511eea22e4b06642027a9a99/1535732466449-H8GDS5I1UC65CUFGAY8B/Bad+Nun.jpg",
+        "Price": 110,
+        "Genre": "Horror",
+        "QuantityAvailable": 10
+    },
+    {
+        "BookId": "106",
+        "Name": "The Oz",
+        "ImageUrl": "https://images.moviesanywhere.com/e75b790f782e0c6c771f07df61a8b4f4/5b4ed3b1-3fa3-4164-80a7-a3197bb84122.jpg",
+        "Price": 840,
+        "Genre": "Horror",
+        "QuantityAvailable": 10
+    },
+    {
+        "BookId": "107",
+        "Name": "Sinchan",
+        "ImageUrl": "https://images-na.ssl-images-amazon.com/images/I/71Mzo3pusxL.jpg",
+        "Price": 1300,
+        "Genre": "Cartoon",
+        "QuantityAvailable": 10
+    },
+    {
+        "BookId": "108",
+        "Name": "Dragon Ball",
+        "ImageUrl": "https://images-na.ssl-images-amazon.com/images/I/51I2IWKvQWL._SX331_BO1,204,203,200_.jpg",
+        "Price": 1241,
+        "Genre": "Anime",
+        "QuantityAvailable": 10
+    },
+    {
+        "BookId": "109",
+        "Name": "Naruto",
+        "ImageUrl": "https://images-na.ssl-images-amazon.com/images/I/51lJL6K1nLL._SX331_BO1,204,203,200_.jpg",
+        "Price": 1001,
+        "Genre": "Anime",
+        "QuantityAvailable": 10
+    },
+    {
+        "BookId": "110",
+        "Name": "Make Your",
+        "ImageUrl": "https://images-na.ssl-images-amazon.com/images/I/71e1bko1zRL.jpg",
+        "Price": 1600,
+        "Genre": "Motivational",
+        "QuantityAvailable": 10
+    }
+    
+
+]
